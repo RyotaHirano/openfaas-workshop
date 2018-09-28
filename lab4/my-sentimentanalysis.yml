@@ -1,0 +1,9 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  my-sentimentanalysis:
+    lang: python3
+    handler: ./my-sentimentanalysis
+    image: teamnaporitan/my-sentimentanalysis:latest
