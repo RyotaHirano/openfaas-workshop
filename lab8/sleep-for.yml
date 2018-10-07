@@ -1,0 +1,14 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  sleep-for:
+    lang: python3
+    handler: ./sleep-for
+    image: teamnaporitan/sleep-for:latest
+    environment:
+      sleep_duration: 2
+      read_timeout: 5
+      write_timeout: 5
+      exec_timeout: 5
